@@ -30,15 +30,17 @@ const router = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
   cookiePassword: 'somepassword',
 })
 
+
 app.use(adminBro.options.rootPath, router)
 app.use(express.static('./public'));
+app.get('/', router)
 
 const run = async () => {
   await mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
-  app.listen(process.env.PORT, () => console.log(`Admin Panel is under localhost:${process.env.PORT}/admin`))
+  app.listen(process.env.PORT, () => console.log(`Admin Panel is under localhost:${process.env.PORT}`))
 }
 
 run()

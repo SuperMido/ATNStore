@@ -62,7 +62,10 @@ module.exports = {
   locale: {
     translations: {
       messages: {
-        loginWelcome: "to the ATN Admin Panel - Please login."
+        loginWelcome: "Email: test@test.com || Password: password"
+      },
+      labels: {
+        loginWelcome: "Welcome to the ATN Admin Panel"
       }
     }
   },
