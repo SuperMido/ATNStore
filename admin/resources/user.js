@@ -32,7 +32,10 @@ module.exports = {
           record: data.record.toJSON()
         }
       }
-    }
+    },
+    edit: { isAccessible: ({ currentAdmin }) => currentAdmin && currentAdmin.role === 'Admin' },
+    delete: { isAccessible: ({ currentAdmin }) => currentAdmin && currentAdmin.role === 'Admin' },
+    new: { isAccessible: ({ currentAdmin }) => currentAdmin && currentAdmin.role === 'Admin' },
   }
 }
 

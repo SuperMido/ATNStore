@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { ApiClient, ViewHelpers } from 'admin-bro'
-import { Label, Table, Columns, Column, WrapperBox, ValueBlock, StyledButton } from 'admin-bro/components'
-import { colors } from 'admin-bro/style'
+import { Label, Table, Columns, Column, WrapperBox, ValueBlock, StyledButton } from 'admin-bro/src/frontend/components'
+import { colors } from 'admin-bro/src/frontend/styles'
 
 import DashboardHeader from './dashboard-header'
 import Info from './info'
@@ -45,7 +45,7 @@ export default class Dashboard extends React.Component {
                     value={pagesCount}
                     icon="fas fa-file"
                     color={colors.error}
-                    href={this.h.resourceUrl({ resourceId: 'Page' })}
+                    href={this.h.listUrl({ resourceId: 'Page' })}
                     label="Number of pages"
                   />
                 </Column>
@@ -54,7 +54,7 @@ export default class Dashboard extends React.Component {
                     value={usersCount}
                     icon="fas fa-user"
                     color={colors.warning}
-                    href={this.h.resourceUrl({ resourceId: 'User' })}
+                    href={this.h.listUrl({ resourceId: 'User' })}
                     label="Number of Users"
                   />
                 </Column>

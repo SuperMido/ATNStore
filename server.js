@@ -38,7 +38,7 @@ const run = async () => {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
-  app.listen(process.env.PORT, () => console.log('Admin Panel is under localhost:4040/admin'))
+  app.listen(process.env.PORT, () => console.log(`Admin Panel is under localhost:${process.env.PORT}/admin`))
 }
 
 run()
