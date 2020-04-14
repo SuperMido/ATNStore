@@ -1,12 +1,20 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 
 import { AreaChart, Area, Tooltip, ResponsiveContainer} from 'recharts'
 
-import { Box, H2, H5, H4, Text, Illustration, IllustrationProps, Button, Icon, Badge } from 'admin-bro'
+import { Box, H2, H5, H4, Text, Illustration, IllustrationProps, Button, Icon, Badge, useNotice, ApiClient } from 'admin-bro'
 
 const pageHeaderHeight = 284
 const pageHeaderPaddingY = 74
 const pageHeaderPaddingX = 250
+
+const NOTICE_MESSAGE = {
+    message: 'Hope you have a good day ^_^',
+    type: 'success',
+}
+
+const api = new ApiClient()
+
 
 const data = [
     { name: 'Page A', uv: 500, pv: 2400, amt: 2400 },
@@ -76,6 +84,8 @@ const DashboardHeader = () => {
 }
 
 const Dashboard = (props) => {
+    const addNotice = useNotice()
+
     return (
         <Box>
             <DashboardHeader />
@@ -84,22 +94,26 @@ const Dashboard = (props) => {
             <Box variant="grey">
                 <Box variant="white" flex flexDirection="row">
                     <Box flexGrow={1}>
-                        <H5 textAlign="left"> This application based on AdminBro and created by <Badge mb="default" variant="primary" mr="default" size="lg" outline>Tran Quang Huy</Badge></H5>
+                        <H5 textAlign="left"> This application based on AdminBro and created by&nbsp;&nbsp;
+                            <Button onClick={() => addNotice(NOTICE_MESSAGE)}><Icon icon="PageFirst" />Tran Quang Huy &nbsp;<Icon icon="PageLast" /></Button>
+                        </H5>
                         <H4 textAlign="left"> University of Greenwich (Da Nang) - Student ID: GCD18457</H4>
                     </Box>
                     <Box flexShrink={0}>
+                        <form action={"https://www.facebook.com/huy.mido"} target="_blank">
                         <Button
                             variant="primary"
-                            href="https://www.facebook.com/huy.mido"
-                            target= "__blank"
                         ><Icon icon="LogoFacebook" />
                             Visit me on Facebook
                         </Button >
+                        </form>
                         <Box position="absolute" top={450} right={55} >
-                            <Button variant="danger" mr="default" href="https://github.com/SuperMido" target= "__blank">
+                            <form action={"https://github.com/SuperMido"} target="_blank">
+                            <Button variant="danger" mr="default">
                                 <Icon icon="LogoGithub" />
                                  Visit me on GitHub
                             </Button>
+                            </form>
                         </Box>
                     </Box>
                 </Box>

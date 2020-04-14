@@ -44,7 +44,6 @@ module.exports = {
     { resource: ArticleModel, options: { parent: menu.post} },
   ],
   version: {
-    admin: true,
     app : '1.6.1.2'
   },
   branding: {
