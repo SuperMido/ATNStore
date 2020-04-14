@@ -8,7 +8,7 @@ const CommentSchema = new Schema({
     required: true,
   },
   flagged: Boolean,
-  category: {
+  product: {
     type: Schema.Types.ObjectId,
     ref: 'Product',
   },

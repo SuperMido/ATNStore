@@ -2,7 +2,7 @@ import React from 'react'
 
 import { AreaChart, Area, Tooltip, ResponsiveContainer} from 'recharts'
 
-import { Box, H2, H5, H4, Text, Illustration, IllustrationProps, Button, Icon,  } from 'admin-bro'
+import { Box, H2, H5, H4, Text, Illustration, IllustrationProps, Button, Icon, Badge } from 'admin-bro'
 
 const pageHeaderHeight = 284
 const pageHeaderPaddingY = 74
@@ -68,9 +68,7 @@ const DashboardHeader = () => {
             >
                 <Text textAlign="center" color="white">
                     <H2>Welcome to ATN Admin Panel</H2>
-                    {/*<div>*/}
-                    {/*    <img src={logo} alt="Logo" />*/}
-                    {/*</div>*/}
+                    <p><img src="/images/logo.png" alt="logo" width={250} /></p>
                 </Text>
             </Box>
         </Box>
@@ -86,19 +84,23 @@ const Dashboard = (props) => {
             <Box variant="grey">
                 <Box variant="white" flex flexDirection="row">
                     <Box flexGrow={1}>
-                        <H5 textAlign="left"> This application based on AdminBro and created by Tran Quang Huy</H5>
+                        <H5 textAlign="left"> This application based on AdminBro and created by <Badge mb="default" variant="primary" mr="default" size="lg" outline>Tran Quang Huy</Badge></H5>
                         <H4 textAlign="left"> University of Greenwich (Da Nang) - Student ID: GCD18457</H4>
                     </Box>
                     <Box flexShrink={0}>
                         <Button
-                            as="a"
-                            size="sm"
                             variant="primary"
                             href="https://www.facebook.com/huy.mido"
                             target= "__blank"
                         ><Icon icon="LogoFacebook" />
                             Visit me on Facebook
-                        </Button>
+                        </Button >
+                        <Box position="absolute" top={450} right={55} >
+                            <Button variant="danger" mr="default" href="https://github.com/SuperMido" target= "__blank">
+                                <Icon icon="LogoGithub" />
+                                 Visit me on GitHub
+                            </Button>
+                        </Box>
                     </Box>
                 </Box>
             </Box>

@@ -12,10 +12,13 @@ module.exports = {
   },
   actions: {
     show: {
-      isAccessible: false,
+      showInDrawer: true,
     },
     edit: {
       showInDrawer: true,
-    }
+    },
+    new: {
+      showInDrawer: true,
+    },
   }
 }

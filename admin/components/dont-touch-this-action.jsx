@@ -7,8 +7,8 @@ const DontTouchThis = (props) => {
   return (
     <Box flex>
     <Box variant="white" width={1/2} boxShadow="card" mr="xxl" flexShrink={0}>
-      <H3>Example of a simple page</H3>
-      <p>Where you can put almost everything</p>
+      <H3>WHY YOU TOUCH THAT???</H3>
+      <p>Your Information is not available now</p>
       <p>like this:</p>
       <p><img src="https://i.redd.it/rd39yuiy9ns21.jpg" alt="stupid cat" width={300} /></p>
     </Box>
