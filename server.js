@@ -11,11 +11,6 @@ const UserAccountModel = require('./models/user.account.model')
 
 const adminBro = new AdminBro(AdminBroOptions)
 
-// const ADMIN = {
-//   email: '1',
-//   password: '1',
-// }
-
 // const router = AdminBroExpress.buildRouter(adminBro)
 const router = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
   authenticate: async (email, password) => {
@@ -26,8 +21,8 @@ const router = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
     }
     return null
   },
-  cookieName: 'adminbro',
-  cookiePassword: 'somepassword',
+  cookieName: 'adminATN',
+  cookiePassword: 'LongPassword',
 })
 
 
