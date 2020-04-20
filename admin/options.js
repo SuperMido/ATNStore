@@ -40,8 +40,8 @@ module.exports = {
     { resource: PageModel, options: { parent: menu.page, ...page } },
     { resource: CommentModel, options: { parent: menu.page, ...comment } },
 
-    { resource: BlogPostModel, options: { parent: menu.post} },
-    { resource: ArticleModel, options: { parent: menu.post} },
+    { resource: BlogPostModel, options: { parent: menu.post}, ...blogPost },
+    { resource: ArticleModel, options: { parent: menu.post}, ...article },
   ],
   version: {
     app : '1.6.1.2'
