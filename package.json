@@ -14,7 +14,7 @@
     "admin-bro-expressjs": "^2.0.4",
     "admin-bro-mongoose": "^0.5.1",
     "admin-bro-theme-dark": "^1.0.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bcrypt": "^3.0.6",
     "body-parser": "^1.18.3",
     "boom": "^7.3.0",
